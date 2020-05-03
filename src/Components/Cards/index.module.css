@@ -1,0 +1,51 @@
+.container {
+  min-width: 23%;
+  width: 400px;
+  padding: 2rem 1.5rem;
+  background-color: white;
+  margin: 1%;
+  border-radius: 10px;
+  border-top:1px solid #dcdce6;
+  box-shadow: 0 0 20px rgba(0,0,0, .1);
+  transition: all .3s ease;
+}
+
+.container:hover{
+  transform: scale(1.01);
+}
+
+.title{
+  text-align: center;
+  font-size: 1.2rem;
+  color: #565656;
+}
+
+.image{
+  display: block;
+  margin: 15px auto;
+  border-radius: 5px;
+}
+
+.cal{
+  text-align: center;
+}
+
+.ingredientsTitle{
+  font-size: 1.5rem;
+  margin: 15px 0;
+}
+
+.ingredients{
+  list-style-type: none;
+  padding: 10px 20px;
+  overflow: scroll;
+  height: 200px;
+  overflow-x: hidden;
+}
+
+.ingredient{
+  margin-bottom: 5px;
+}
+
+
+

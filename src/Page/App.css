@@ -1,0 +1,19 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+h1{
+  font-size: 3rem;
+  font-weight: 300;
+  color: #e02041;
+}
+
+.recipes{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}

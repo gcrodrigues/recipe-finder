@@ -1,0 +1,36 @@
+.form{
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formInput,
+.formButton{
+  padding: 0.8rem;
+  border: none;
+  background: white;
+  outline: 0;
+  border-top:1px solid #dcdce6;
+  border-bottom:1px solid #dcdce6;
+}
+
+.formInput{
+  font-size: 2rem;
+  border-radius: 5px 0 0 5px;
+  border-left:1px solid #dcdce6;
+}
+
+.formButton{
+  border-radius: 0 5px 5px 0;
+  font-size: 1.8rem;
+  transition: all .3s ease;
+  cursor: pointer;
+  color: rgb(71, 68, 68);
+  border-right:1px solid #dcdce6;
+}
+
+.formButton:hover{
+  background-color: #e02041;
+  color:#dcdce6;
+}
