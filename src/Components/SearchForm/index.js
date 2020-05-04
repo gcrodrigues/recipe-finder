@@ -1,7 +1,7 @@
 import React from 'react';
 import {FaSearch} from 'react-icons/fa'
 import styles from './index.module.css';
-const SearchForm = ({ submit, change, value }) => {
+const SearchForm = ({ submit, change, value , placeholder }) => {
   return(
     <form 
     className={styles.form}
@@ -18,6 +18,8 @@ const SearchForm = ({ submit, change, value }) => {
       <FaSearch/>
     </button>
 
+    {placeholder}  
+    
     </form>
   );
 }

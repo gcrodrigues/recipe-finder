@@ -17,3 +17,22 @@ h1{
   justify-content: center;
   flex-wrap: wrap;
 }
+
+.spin{
+  transition: all .3s linear;
+  animation: spin 2s infinite;
+  margin-left: 10px;
+  transform: rotatez(0deg);
+
+}
+
+@keyframes spin {
+  0%{
+    transform: rotatez(0deg);
+
+  }
+  100%{
+    transform: rotatez(360deg);
+
+  }
+}

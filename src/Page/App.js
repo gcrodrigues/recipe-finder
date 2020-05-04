@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import Cards from '../Components/Cards';
 import SearchForm from '../Components/SearchForm';
+import {FaSpinner} from 'react-icons/fa';
 
 import "./App.css";
 
@@ -12,11 +13,19 @@ const App = () => {
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState('');
   const [query, setQuery] = useState('brazil');
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
-    getRecipes();
+      getRecipes();
+      setLoading(false);
     //eslint-disable-next-line
   },[query])
+
+  const apiLoading = () => {
+    if(!loading){
+      return <FaSpinner className='spin' color={'#090909'} size={30}/>
+    }
+  }
 
   const getRecipes = async () => {
     const response = await fetch(
@@ -24,6 +33,7 @@ const App = () => {
     );
     const data = await response.json();
     setRecipes(data.hits);  
+    setLoading(true);
   }
   
   const searchRecipe = (e) => {
@@ -40,8 +50,8 @@ const App = () => {
     <div  className="App">
       <h1>Recipe Finder</h1>
       
-      <SearchForm submit={(e) => {getSearch(e)}} value={search} change={(e) => {searchRecipe(e)}}/>
-      
+      <SearchForm placeholder={apiLoading()} submit={(e) => {getSearch(e)}} value={search} change={(e) => {searchRecipe(e)}}/>
+
       <div className="recipes">
         {recipes.map(recipe => (
           <Cards 
