@@ -50,8 +50,8 @@ const App = () => {
     <div  className="App">
       <h1>Recipe Finder</h1>
       
-      <SearchForm placeholder={apiLoading()} submit={(e) => {getSearch(e)}} value={search} change={(e) => {searchRecipe(e)}}/>
-
+      <SearchForm submit={(e) => {getSearch(e)}} value={search} change={(e) => {searchRecipe(e)}}/>
+      {apiLoading()}  
       <div className="recipes">
         {recipes.map(recipe => (
           <Cards 

@@ -1,5 +1,6 @@
 .form{
-  min-height: 20vh;
+  /* min-height: 20vh; */
+  margin:25px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,14 +17,15 @@
 }
 
 .formInput{
-  font-size: 2rem;
+  font-size: 1.5rem;
   border-radius: 5px 0 0 5px;
   border-left:1px solid #dcdce6;
+  width: 100%;
 }
 
 .formButton{
   border-radius: 0 5px 5px 0;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   transition: all .3s ease;
   cursor: pointer;
   color: rgb(71, 68, 68);
